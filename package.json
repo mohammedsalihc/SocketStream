@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "messaging system built with Node.js, Express, and Socket.io, featuring real-time chat, user authentication, and MongoDB integration.",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
     "mongoose": "^8.16.3",
