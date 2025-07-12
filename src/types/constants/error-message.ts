@@ -15,5 +15,6 @@ export const ErrorMessages ={
     user_not_found:"user not found",
     incorrect_password:"incorrect password",
     google_authentication_failed:"google authentication failed",
-    only_google_login:"this account is linked with Google login only"
+    only_google_login:"this account is linked with Google login only",
+    account_disabled:"your account has been disabled please contact the support"
 }   
