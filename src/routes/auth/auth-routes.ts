@@ -5,4 +5,5 @@ const router = Router()
 const auth = new AuthController()
 router.post('/register',(req,res)=>auth.Register(req,res))
 router.post('/login',(req,res)=>auth.Login(req,res))
+router.post('/google-signin',(req,res)=>auth.GoogleSignIN(req,res))
 export default router;

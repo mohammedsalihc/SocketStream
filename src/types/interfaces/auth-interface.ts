@@ -1,5 +1,5 @@
 import { Moment } from "moment";
-import { ERole } from "../enum/auth-enum";
+import { ELoginProvider, ERole } from "../enum/auth-enum";
 
 export interface IAuth {
     _id?: string
@@ -8,7 +8,8 @@ export interface IAuth {
     password?: string,
     disabled?: Boolean,
     created_at?: Moment
-    role: ERole
+    role: ERole,
+    provider?:ELoginProvider
 }
 
 export interface IUser {
