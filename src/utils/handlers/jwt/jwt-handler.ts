@@ -43,4 +43,9 @@ export class JwtHandler {
             })
         }
     }
+
+    VerifyToken = async(token:string):Promise<ITokenPayload>=>{
+        const payload:any = jwt.verify(token,process.env.JWT_SUPERKEY)
+        return payload && payload.auth_id ? { auth_id: payload.auth_id, user_id: payload.user_id } : undefined
+    }
 }

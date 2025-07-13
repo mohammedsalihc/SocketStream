@@ -31,3 +31,7 @@ export interface ITokenPayload {
     auth_id?: string
 }
 
+export interface IConnectedUser{
+    _id: string,
+    sockets:string[]
+}
