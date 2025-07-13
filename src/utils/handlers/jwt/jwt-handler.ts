@@ -27,7 +27,7 @@ export class JwtHandler {
                 }
                 const payload :ITokenPayload = decoded;
                 req.payload = payload;
-                if(!roles || !roles?.length|| !roles.includes(payload.role as ERole)){
+                if(!roles || !roles?.length||roles.includes(payload.role as ERole)){
                     const user = await UserModel.findOne({_id:payload?.user_id});
                     if(!user){
                         return res.status(401).send(status_code[401])
