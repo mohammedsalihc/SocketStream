@@ -8,6 +8,7 @@ import { IChatroom, IMessage } from "../../types/interfaces/chat-interface";
 import { IPagination, IQeury } from "../../types/interfaces/query-interface";
 import { ExpressRequest, ExpressResponse } from "../../types/interfaces/server-interface";
 import { ControllerHandler } from "../../utils/handlers/controller/controller";
+import { SocketMessenger } from "../../utils/handlers/socket.io/socket-messenger";
 import { bodyRequiredValidator, PageNumberSanitizer } from "../../utils/handlers/validations/valiators";
 
 export class ChatController extends ControllerHandler{
@@ -15,7 +16,7 @@ export class ChatController extends ControllerHandler{
     private create_service = new CreateService()
     private update_service = new UpdateService()
     private list_service = new ListServices()
-
+    private socket_service = new SocketMessenger()
 
     ListChats =   async (request: ExpressRequest, response: ExpressResponse) => {
         try {
@@ -74,7 +75,7 @@ export class ChatController extends ControllerHandler{
             }
             message = await this.create_service.Message(message)
             this.jsonResponse(response,message)
-            //implement socket:
+            this.socket_service.sendMessageToClient(request?.app,message,reciever?._id)
             this.update_service.Chatroom({_id:chatroom?._id},{last_message:message?._id})
         } catch (e) {
             this.error(response, 500, null, e);
