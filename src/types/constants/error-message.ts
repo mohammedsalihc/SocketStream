@@ -16,5 +16,8 @@ export const ErrorMessages ={
     incorrect_password:"incorrect password",
     google_authentication_failed:"google authentication failed",
     only_google_login:"this account is linked with Google login only",
-    account_disabled:"your account has been disabled please contact the support"
+    account_disabled:"your account has been disabled please contact the support",
+    chat_reciever_not_found:"message reciever not found",
+    action_not_allowed:"action not allowed",
+    chatroom_not_found:"chatroom not found"
 }   
