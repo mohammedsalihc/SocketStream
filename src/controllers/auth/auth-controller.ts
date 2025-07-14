@@ -62,7 +62,7 @@ export class AuthController extends ControllerHandler {
                 return this.error(response, 400, ErrorMessages.body_validation_error, body_validation_error)
             }
             body.email = body?.email.toLowerCase();
-            const auth = await this.detail_service.Auth({ email: body?.email });
+            const auth = await this.detail_service.Auth({ email: body?.email,disabled:false });
             if (!auth) {
                 return this.error(response, 404, ErrorMessages.user_not_found)
             }
@@ -116,6 +116,16 @@ export class AuthController extends ControllerHandler {
             this.jsonResponse(response,token)
         } catch (e) {
             console.log(e)
+            this.error(response, 500, null, e);
+        }
+    };
+
+    ProfileDetails  = async (request: ExpressRequest, response: ExpressResponse) => {
+        try {
+            let user = request?.user;
+            user  = await this.detail_service.User({_id:user?._id,disabled:false});
+            this.jsonResponse(response,user)
+        } catch (e) {
             this.error(response, 500, null, e);
         }
     };
