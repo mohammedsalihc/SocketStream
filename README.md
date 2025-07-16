@@ -1,6 +1,36 @@
-# SocketStream - Real-Time Chat Backend
+#SocketStream - Real-Time Chat Backend
+SocketStream is a real-time messaging platform where users can engage in instant chat, view profiles, and collaborate efficiently. It includes secure user authentication using email and Google OAuth, protected routes with JWT, and live chat functionality powered by Socket.IO. MongoDB is used for data persistence, and the system supports profile management and basic moderation tools like block/delete.
 
-SocketStream is a real-time messaging platform where users can engage in instant chat, view profiles, and collaborate seamlessly. The application includes user authentication via email and Google OAuth, real-time communication using Socket.IO, and secure session handling through JWT. It also features a simple yet effective user interface for managing conversations and users.
+This project is designed and developed with a focus on clean architecture and scalability. While not using a microservice pattern or containerization, the codebase follows modular principles, making it easy to maintain and extend. It serves as a solid foundation for real-world production-ready backend systems that require authentication and real-time communication features.
 
-This project is developed with performance and scalability in mind. While not fully microservice-based, it separates concerns cleanly and uses WebSockets for real-time interactions. Built with Express and MongoDB, the backend is containerized with Docker and designed to be easily deployable to modern cloud platforms. It lays a solid foundation for future scaling with microservices, background jobs, and real-time infrastructure.
+ Postman collections: [Coming soon]
+
+#Tech Stack:
+
+Node.js
+Typescript
+MongodDb
+JWT
+Socket.io
+
+*Services used:
+
+S3 signed-url
+Mongodb Atlas
+
+## 🚀 Quick Start
+
+
+
+```bash
+
+git clone https://github.com/yourusername/socketstream.git
+
+cd socketstream
+
+npm install
+
+npm run start
+
+
 
