@@ -1,36 +1,57 @@
-#SocketStream - Real-Time Chat Backend
-SocketStream is a real-time messaging platform where users can engage in instant chat, view profiles, and collaborate efficiently. It includes secure user authentication using email and Google OAuth, protected routes with JWT, and live chat functionality powered by Socket.IO. MongoDB is used for data persistence, and the system supports profile management and basic moderation tools like block/delete.
+# 🚀 SocketStream – Real-Time Chat Backend
 
-This project is designed and developed with a focus on clean architecture and scalability. While not using a microservice pattern or containerization, the codebase follows modular principles, making it easy to maintain and extend. It serves as a solid foundation for real-world production-ready backend systems that require authentication and real-time communication features.
+SocketStream is a real-time messaging backend built with Node.js, Express, and Socket.IO.  
+It allows users to chat instantly, manage profiles, and access features like blocking and deleting chats.
 
- Postman collections: [Coming soon]
+This backend supports:
+- 🔐 **User authentication** via Email and Google OAuth
+- 🛡️ **Protected routes** using JWT
+- 💬 **Live chat** with Socket.IO
+- 🧑‍💼 **Profile management** and user moderation
+- 🗂️ **MongoDB** for database storage
 
-#Tech Stack:
+---
 
-Node.js
-Typescript
-MongodDb
-JWT
-Socket.io
+## 🧠 Architecture
 
-*Services used:
+Built using clean and modular code principles.  
+While it doesn’t follow a microservice or Docker setup, the structure is scalable and maintainable for production environments.
 
-S3 signed-url
-Mongodb Atlas
+---
 
-## 🚀 Quick Start
+## 📬 Postman Collection
 
+> Coming soon...
 
+Includes APIs for:
+- Email & Google Login
+- Fetching user profile
+- Real-time messaging
+- Blocking / Deleting chats
+
+---
+
+## 🛠️ Tech Stack
+
+- **Node.js**  
+- **TypeScript**  
+- **MongoDB**  
+- **JWT (JSON Web Tokens)**  
+- **Socket.IO**
+
+---
+
+## 🌐 Services Used
+
+- ☁️ **Amazon S3 Signed URLs**  
+- 🍃 **MongoDB Atlas**
+
+---
+
+## 📦 Installation & Setup
 
 ```bash
-
 git clone https://github.com/yourusername/socketstream.git
-
 cd socketstream
-
 npm install
-
 npm run start
-
-
-
