@@ -1,42 +1,38 @@
-SocketStream – Node.js Real-Time Messaging Backend
-Backend for SocketStream, a real-time chat application built for seamless communication.
+# ⚡ SocketStream - Real-Time Chat Backend
 
-SocketStream is a messaging platform where users can register, log in (via email or Google), and engage in real-time conversations. The backend is production-ready and built for scalability, maintainability, and performance. It features full user authentication, protected APIs, profile management, and real-time messaging using WebSockets (Socket.IO).
+Backend for the **SocketStream** messaging platform built with **Node.js**, **Express**, **MongoDB**, and **Socket.IO**.
 
-While currently an MVP, SocketStream lays a strong foundation for team collaboration and communication. Its modular architecture supports clean scaling, and it's ready to integrate with both web and mobile frontends.
+It supports real-time communication, JWT authentication, Google OAuth, and secure user profile handling.
 
-✨ Features
-✅ Email & Google OAuth authentication
+---
 
-🔐 JWT-based protected routes
+## 🔧 Features
 
-📄 User profile management
+- 🔐 JWT & Google OAuth Authentication  
+- 💬 Real-time Messaging (Socket.IO)  
+- 📁 MongoDB Integration  
+- ⚙️ Protected Routes  
 
-💬 Real-time chat using Socket.IO
+---
 
-🧱 Modular MVC architecture for scalability
+## 🛠️ <details><summary>Tech Stack</summary>
 
-📬 REST APIs for user and chat management
+- Node.js  
+- Express  
+- MongoDB (Mongoose)  
+- Socket.IO  
+- JWT  
+- Google OAuth  
+- dotenv
 
-🧪 Postman tested endpoints
+</details>
 
-🌐 CORS configured for frontend-backend communication
+---
 
-⚙️ Tech Stack
-Node.js
+## 🚀 Quick Start
 
-Express
-
-MongoDB + Mongoose
-
-JWT for authentication
-
-Socket.IO for real-time chat
-
-Google OAuth 2.0
-
-Postman for API testing
-
-📦 Services & Tools Used
-S3 signed-URLs
-
+```bash
+git clone https://github.com/yourusername/socketstream.git
+cd socketstream
+npm install
+npm run dev
